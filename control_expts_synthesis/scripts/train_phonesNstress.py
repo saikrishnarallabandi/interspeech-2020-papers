@@ -213,7 +213,7 @@ if __name__ == "__main__":
     val_loader = data_utils.DataLoader(
         valset, batch_size=hparams.batch_size,
         num_workers=hparams.num_workers, shuffle=True,
-        collate_fn=collate_fn_phonesNqF0s, pin_memory=hparams.pin_memory)
+        collate_fn=collate_fn_phonesNstress, pin_memory=hparams.pin_memory)
 
     # Model
     model = Tacotron(n_vocab=1+ len(ph_ids),
@@ -264,6 +264,7 @@ if __name__ == "__main__":
 
     print("Finished")
     sys.exit(0)
+
 
 
 
